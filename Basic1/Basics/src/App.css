@@ -1,0 +1,25 @@
+body{
+    background-color: rgb(231, 158, 124);
+    
+}
+.head1{
+    color: rebeccapurple;
+    font-size: 25px;
+}
+.head2{
+    color: red;
+    font-size: 20px;
+}
+.head4{
+    color: white;
+    font-size: 18px;
+}
+.buttons{
+    color: white;
+    background-color: black;
+    font: 500;
+}
+.buttons:hover{
+    background-color: white;
+    color: black;
+}
