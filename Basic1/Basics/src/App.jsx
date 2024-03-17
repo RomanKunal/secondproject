@@ -26,6 +26,7 @@ function App() {
   function handleclick(selectbutton){
     setCount(selectbutton);
     console.log(selectbutton);
+    
   }
 
   return (
