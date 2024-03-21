@@ -4,7 +4,7 @@ import { useState } from "react";
 
 
 
-export default function Player({name,symbol}){
+export default function Player({name,symbol,isactive}){
     const [Playername,setPlayername]=useState(name);
     function handlechange(event){
         setPlayername(event.target.value);
@@ -14,6 +14,8 @@ export default function Player({name,symbol}){
     function handleclick(){
         setEditing(!isEditing);
     }
+
+
     let playername=<span className="player-name">{Playername}</span>;
     let btn='Edit';
     if(isEditing){
@@ -22,7 +24,7 @@ export default function Player({name,symbol}){
     }
 
     return(
-        <li>
+        <li className={isactive ? 'active': undefined}>
             <span className="player">
                 {playername}
                 <span className="player-symbol">{symbol}</span>
