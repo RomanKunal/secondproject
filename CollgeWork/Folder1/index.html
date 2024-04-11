@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Website</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        overflow-x: hidden;
+    }
+    /* Introductory Page Styles */
+    .intro-container {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url("paper-style-dynamic-lines-background_23-2149008629.avif"); /* Add the URL of your background image */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .intro-content {
+        text-align: center;
+    }
+    .intro-heading {
+        color: wheat;
+        font-size: 60px;
+        margin-bottom: 20px;
+        animation: fadeInUp 1.7s ease-in-out forwards;
+        font-weight: 900;
+        opacity: 100%;
+    }
+    .intro-button {
+        padding: 10px 20px;
+        font-size: 30px;
+        background-color: #000000;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        outline: none;
+        animation: fadeInUp 1.5s ease-in-out forwards;
+    }
+    p{
+        color: #bb9292;
+        font-size: 30px;
+        animation: fadeInUp 1.6s ease-in-out forwards;
+    }
+    /* Login Page Styles */
+    .login-container {
+        display: none;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        background-image: url("backpic.webp"); /* Add the URL of your background image */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .login-content {
+        background-color: rgba(85, 80, 80, 0.8);
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 0 10px rgb(255, 254, 254);
+        text-align: center;
+        animation: fadeInUp 1.9s ease-in-out forwards;
+    }
+    .login-input {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #818181;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+    .result{
+        font-size: 25px;
+        background-color: black;
+        color: white;
+        cursor: pointer;
+        padding: 10px;
+    }
+    .result:hover{
+        background-color: violet;
+        color: grey;
+    }
+    
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgba(134, 121, 121, 0.8);
+        padding: 10px 20px;
+        box-shadow: 0 2px 5px rgba(245, 245, 245, 0.1);
+        z-index: 999;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .navbar-brand {
+        font-size: 45px;
+        color: #f5f5f5;
+        text-decoration: none;
+    }
+    .navbar-nav {
+        display: flex;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        justify-content: right;
+    }
+    .navbar-item {
+        margin-right: 10px;
+    }
+    .navbar-link {
+        font-size: 25px;
+        text-decoration: none;
+        color: #ffffff;
+    }
+    .navbar-link:hover {
+        color: #000000;
+    }
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+</style>
+</head>
+<body>
+<!-- Introductory Page -->
+<div class="intro-container" id="introContainer">
+    <div class="intro-content">
+        <h1 class="intro-heading">Welcome to My Website</h1>
+        <p>This Project is based on sentimental analysis of Youtube comment section.<br>Designed and Developed by Kunal and Rajeev</p>
+        <button class="intro-button" onclick="showLoginPage()">Let's Go</button>
+    </div>
+</div>
+
+<!-- Login Page -->
+<div class="login-container" id="loginContainer">
+    <nav class="navbar">
+        <a href="#" class="navbar-brand"><img src="logo.jpeg" width="55px"></a>
+        <ul class="navbar-nav">
+            <li class="navbar-item"><a href="#" class="navbar-link">Home</a></li>
+            <li class="navbar-item"><a href="#" class="navbar-link">About</a></li>
+            <li class="navbar-item"><a href="#" class="navbar-link">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="login-content">
+        <h2>Login</h2>
+        <input class="login-input" type="text" placeholder="Name">
+        <input class="login-input" type="text" placeholder="Channel Name">
+        <input class="login-input" type="password" placeholder="Password">
+        <input class="login-input" type="url" placeholder="Copy Link">
+        <button class="result">Generate Analysis</button>
+    </div>
+</div>
+
+<!-- Generate Report Button -->
+<button class="generate-report" onclick="generateReport()">Generate Report</button>
+
+<script>
+    function showLoginPage() {
+        document.getElementById("introContainer").style.display = "none";
+        document.getElementById("loginContainer").style.display = "flex";
+    }
+
+    function generateReport() {
+        // Code to generate report goes here
+        alert("Generating report...");
+    }
+</script>
+</body>
+</html>
