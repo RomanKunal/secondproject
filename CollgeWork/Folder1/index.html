@@ -332,7 +332,7 @@ textarea{
         <div class="headline">
             <span>Our analysis report<br> says a lot!</span>
             <h6 class="subheadline">We make your work easier</h6>  
-            <button class="homebutton">Let's Go</button>
+            <button class="homebutton" id="goToContainer">Let's Go</button>
         </div>
     </div>
     <!--Second Div-->
@@ -401,6 +401,55 @@ textarea{
             document.getElementById("navbar").style.top = "-100px";
           }
         }
+        const homeButton = document.querySelector('.list-container li:nth-child(1)');
+        const reportButton = document.querySelector('.list-container li:nth-child(2)');
+        const aboutButton =document.querySelector('.list-container li:nth-child(3)')
+        const clientButton=document.querySelector('.list-container li:nth-child(4)');
+        const contactButton=document.querySelector('.list-container li:nth-child(5)');
+        const goToContainerButton = document.getElementById('goToContainer');
+// Add click event listeners to the buttons
+homeButton.addEventListener('click', scrollToFirstDiv);
+reportButton.addEventListener('click', scrollToContainerDiv);
+aboutButton.addEventListener('click',scrollToThirdDiv);
+clientButton.addEventListener('click',scrolltofourth);
+contactButton.addEventListener('click',scrolltocontact);
+goToContainerButton.addEventListener('click', scrollToContainerDiv); 
+
+
+// Function to scroll to the first div
+function scrollToFirstDiv() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
+// Function to scroll to the container div
+function scrollToContainerDiv() {
+    const containerDiv = document.querySelector('.container');
+    containerDiv.scrollIntoView({
+        behavior: 'smooth'
+    });
+}
+function scrollToThirdDiv(){
+    const div=document.querySelector('.About');
+    div.scrollIntoView({
+        behavior:'smooth'
+    });
+}
+function scrolltofourth(){
+    const div1=document.querySelector('.fourthdiv');
+    div1.scrollIntoView({
+        behavior:'smooth'
+    });
+}
+function scrolltocontact(){
+    const div2=document.querySelector('.fifthdiv');
+    div2.scrollIntoView({
+        behavior:'smooth'
+    });
+}
+
     </script>
 </body>
 </html>
