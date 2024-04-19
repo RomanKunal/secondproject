@@ -70,7 +70,9 @@ class Project extends React.Component {
         <div className="container">
           <div className="text-container">
             <h2>Here we do sentimental <br /> analysis of youtube comment section</h2>
-            <p>Fill the form to get to know about your audience Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus laborum repellat aut fugit placeat praesentium labore, id eos, mollitia voluptatibus molestias maxime eum, dolorum expedita fugiat rerum blanditiis. Enim, exercitationem. </p>
+            <p>Fill the form to get to know about your audience.<br/>
+            Sentiment analysis of YouTube comments entails assessing the emotional tone expressed by users. It utilizes natural language processing to discern sentiments such as joy, frustration, or indifference within the comment section. This analysis provides insights into audience reception and engagement, aiding content creators and marketers in understanding viewer sentiment and shaping future strategies.
+               </p>
           </div>
           <div className="contact-box">
             <div className="left">
