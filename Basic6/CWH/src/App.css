@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.text-area-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.text-area-group {
+    margin-bottom: 20px;
+}
+
+.text-area-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.text-area-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    resize: vertical; /* Allow vertical resizing */
+}
+
+.text-area-group textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
